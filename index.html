@@ -7,7 +7,7 @@
 <!-- ============ TEMEL SEO ============ -->
 <title>Kadıköy Bilgisayar Servisi | Aynı Gün Bilgisayar ve Laptop Tamiri</title>
 <meta name="description" content="Kadıköy'de bilgisayar, laptop ve anakart tamiri. Ücretsiz teşhis, aynı gün teslim, 1 ay garanti. Moda, Caferağa, Göztepe, Erenköy'e yerinde servis. Hemen arayın.">
-<meta name="keywords" content="kadıköy bilgisayar servisi, kadıköy bilgisayar tamiri, kadıköy laptop tamiri, kadıköy notebook tamiri, kadıköy veri kurtarma, moda bilgisayar tamircisi, göztepe bilgisayar servisi">
+<meta name="keywords" content="kadıköy bilgisayar servisi, kadıköy bilgisayar tamiri, kadıköy laptop tamiri, kadıköy notebook tamiri, kadıköy veri kurtarma, moda bilgisayar tamircisi, göztepe bilgisayar servisi, kadıköy web sitesi tasarımı, kadıköy sosyal medya yönetimi">
 <meta name="author" content="Kadıköy Bilgisayar Servisi">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <link rel="canonical" href="https://bilgisayarservisi.site/">
@@ -225,11 +225,13 @@
     flex-shrink:0;
   }
   .nav-links{display:flex; gap:28px; list-style:none;}
+  .nav-links li{list-style:none;}
   .nav-links a{
     font-size:0.92rem; color:var(--text-muted); text-decoration:none;
     transition:color .15s ease;
   }
   .nav-links a:hover{color:var(--copper-bright);}
+  .mobile-cta-item{display:none;}
   .nav-cta{
     display:flex; gap:10px; align-items:center;
   }
@@ -481,6 +483,8 @@
   @media (max-width: 700px){
     .nav-links{display:none;}
     .nav-toggle{display:block;}
+    .nav-cta{display:none;}
+    .mobile-cta-item{display:block; margin-top:6px;}
     section{padding:64px 20px;}
   }
 </style>
@@ -497,6 +501,8 @@
       <li><a href="#bolgeler">Bölgeler</a></li>
       <li><a href="#sss">SSS</a></li>
       <li><a href="#iletisim">İletişim</a></li>
+      <li class="mobile-cta-item"><a href="tel:+905354315062" class="btn btn-ghost btn-block">📞 0535 431 50 62</a></li>
+      <li class="mobile-cta-item"><a href="https://wa.me/905354315062" class="btn btn-primary btn-block">WhatsApp</a></li>
     </ul>
     <div class="nav-cta">
       <a href="tel:+905354315062" class="btn btn-ghost">📞 0535 431 50 62</a>
@@ -586,6 +592,11 @@
         <span class="tag-serial">KDK-08</span>
         <h3>Masaüstü Bilgisayar Tamiri</h3>
         <p>Açılmama, mavi ekran, aşırı ısınma ve güç kaynağı arızalarında hızlı teşhis ve onarım.</p>
+      </article>
+      <article class="service-tag">
+        <span class="tag-serial">KDK-09</span>
+        <h3>Web Sitesi ve Sosyal Medya Yönetimi</h3>
+        <p>İşletmeniz için web sitesi kurulumu/güncellemesi ve sosyal medya hesaplarının düzenli yönetimi.</p>
       </article>
     </div>
   </div>
