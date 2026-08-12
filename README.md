@@ -1,6 +1,10 @@
 # Kadıköy Bilgisayar Servisi — Web Sitesi
 
-Bu klasör, GitHub Pages üzerinde doğrudan yayınlanabilecek tek sayfalık, SEO ve GEO (yapay zeka arama motorları) için optimize edilmiş bir site içerir.
+Bu klasör, GitHub Pages üzerinde doğrudan yayınlanabilecek, SEO ve GEO (yapay zeka arama motorları) için optimize edilmiş bir site içerir.
+
+> **Güncelleme — çok ilçeli SEO/GEO genişletmesi:** Site artık tek sayfa değil. Kadıköy'e ek olarak Üsküdar, Maltepe ve Ataşehir için ayrı, kendine özgü içerikli açılış sayfaları eklendi (aşağıdaki "İçerik" bölümüne bakın). Ortak CSS `assets/style.css` dosyasına taşındı, `og-image.png` dosyası meta etiketlerin işaret ettiği `assets/` klasörüne alındı (önceden kırıktı), `sitemap.xml` yeni sayfaları içerecek şekilde güncellendi ve eksik olan `llms.txt` dosyası oluşturuldu.
+>
+> **Sizin yapmanız gereken:** README'deki "MUTLAKA değiştirilmesi gerekenler" tablosundaki `KULLANICI_ADI` (Instagram) ve istatistikler hâlâ geçerli. Ayrıca Üsküdar/Maltepe/Ataşehir sayfalarındaki mahalle listelerini ve "aynı gün / randevulu" teslim süresi ifadelerini kendi gerçek kapasitenize göre teyit edin.
 
 ## İçerik
 - `index.html` — sitenin tamamı (HTML + CSS + JS tek dosyada, hızlı yüklenir)
