@@ -198,7 +198,8 @@
     <a href="#anasayfa" class="logo"><span class="dot"></span> Kadıköy Bilgisayar Servisi</a>
     <ul class="nav-links">
       <li><a href="#hizmetler">Hizmetler</a></li>
-      <li><a href="#neden-biz">Neden Biz</a></li>
+      <li><a href="#yorumlar">Değerlendirmeler</a>
+          <a href="#neden-biz">Neden Biz</a></li>
       <li><a href="#bolgeler">Bölgeler</a></li>
       <li><a href="#sss">SSS</a></li>
       <li><a href="#iletisim">İletişim</a></li>
@@ -850,6 +851,19 @@
       contactBtn.disabled = false;
       contactBtn.textContent = 'Talebi Gönder';
     }
+  });
+</script>
+
+
+<script>
+  // Mobil menü bağlantısına tıklandığında hamburger menüyü kapat
+  document.querySelectorAll('.mobile-menu a, nav a, .nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      const menu = document.querySelector('.mobile-menu, .nav-menu, [data-mobile-menu]');
+      const toggle = document.querySelector('.menu-toggle, .hamburger, [data-menu-toggle]');
+      if (menu && menu.classList.contains('active')) menu.classList.remove('active');
+      if (toggle && toggle.classList.contains('active')) toggle.classList.remove('active');
+    });
   });
 </script>
 
