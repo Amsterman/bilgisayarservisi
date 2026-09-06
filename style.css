@@ -341,3 +341,5 @@
     .mobile-cta-item{display:block; margin-top:6px;}
     section{padding:64px 20px;}
   }
+
+nav a { margin: 0 15px !important; white-space: nowrap !important; }
