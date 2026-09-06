@@ -867,5 +867,12 @@
   });
 </script>
 
-<script>document.querySelectorAll("nav a").forEach(link => { link.addEventListener("click", () => { const nav = document.querySelector("nav"); const btn = document.querySelector(".menu-toggle, .hamburger, [aria-label*="menu" i]"); if (nav) nav.classList.remove("active", "open", "show"); if (btn) btn.classList.remove("active", "open"); }); });</script></body>
+<script>document.querySelectorAll("nav a").forEach(link => { link.addEventListener("click", () => { const nav = document.querySelector("nav"); const btn = document.querySelector(".menu-toggle, .hamburger, [aria-label*="menu" i]"); if (nav) nav.classList.remove("active", "open", "show"); if (btn) btn.classList.remove("active", "open"); }); });</script><script>
+document.querySelectorAll("header nav ul a").forEach(link => {
+  link.addEventListener("click", () => {
+    const t = document.getElementById("navToggle");
+    if (window.innerWidth <= 768 && t) { t.click(); }
+  });
+});
+</script></body>
 </html>
