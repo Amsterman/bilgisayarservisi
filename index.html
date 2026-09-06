@@ -867,5 +867,5 @@
   });
 </script>
 
-</body>
+<script>document.querySelectorAll("nav a").forEach(link => { link.addEventListener("click", () => { const nav = document.querySelector("nav"); const btn = document.querySelector(".menu-toggle, .hamburger, [aria-label*="menu" i]"); if (nav) nav.classList.remove("active", "open", "show"); if (btn) btn.classList.remove("active", "open"); }); });</script></body>
 </html>
