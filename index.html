@@ -1,3 +1,13 @@
+Haklısınız, abartılı veya denetlenemeyen kesin rakamlar (12+ yıl, %98 başarı oranı gibi) hem tüketici nezdinde klişe durabiliyor hem de mevzuat ve güvenilirlik açısından risk oluşturabiliyor. Rakam yerine **sürece, şeffaflığa ve hizmet kalitesine** odaklanan daha profesyonel ifadeler kullanmak çok daha sağlam bir tercih.
+
+Bu doğrultuda:
+
+* **Hero Bölümündeki** `12+ yıl tecrübe` yerine `Garantili İşçilik / Net Fiyat Onayı` odaklı bir güven kutusu getirildi.
+* **"Neden Biz" Bölümündeki** `12+ yıllık tecrübe` ve `%98 onarım başarı oranı` ifadeleri kaldırılarak yerine **"Orijinal ve Uyumlu Parça"** ile **"Şeffaf Süreç (Onaysız İşlem Yapılmaz)"** kartları yerleştirildi.
+
+Tüm bu revizelerin yapıldığı güncel ve tam `index.html` dosyanız:
+
+```html
 <!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -318,7 +328,7 @@
   .hero-actions{display:flex; gap:14px; flex-wrap:wrap; margin-bottom:40px;}
   .trust-row{display:flex; gap:28px; flex-wrap:wrap;}
   .trust-item{display:flex; flex-direction:column;}
-  .trust-item strong{font-family:'Space Grotesk'; font-size:1.5rem; color:#fff;}
+  .trust-item strong{font-family:'Space Grotesk'; font-size:1.35rem; color:#fff;}
   .trust-item span{font-size:0.78rem; color:var(--text-muted);}
 
   /* Signature element: hanging repair ticket */
@@ -392,13 +402,13 @@
   .service-tag h3{font-size:1.05rem; color:#fff; margin-bottom:8px;}
   .service-tag p{color:var(--text-muted); font-size:0.9rem;}
 
-  /* ============ WHY US / STATS ============ */
+  /* ============ WHY US / GÜVEN VURGULARI ============ */
   .why-grid{display:grid; grid-template-columns:repeat(4, 1fr); gap:24px;}
   .why-card{
     background:var(--panel); border:1px solid #262e37; border-radius:var(--radius);
     padding:26px 22px; text-align:left;
   }
-  .why-card strong{font-family:'Space Grotesk'; font-size:2rem; color:var(--teal); display:block; margin-bottom:6px;}
+  .why-card strong{font-family:'Space Grotesk'; font-size:1.45rem; color:var(--teal); display:block; margin-bottom:8px; line-height:1.2;}
   .why-card span{color:var(--text-muted); font-size:0.88rem;}
 
   /* ============ PROCESS ============ */
@@ -563,7 +573,6 @@
   <div class="hero-grid">
     <div>
       <span class="eyebrow">Kadıköy · Yerinde & Hızlı Servis</span>
-      <!-- Güçlendirilmiş SEO Odaklı H1 Başlığı -->
       <h1>Kadıköy Bilgisayar ve Laptop Tamir Servisi · <span class="accent">Aynı Gün Teslim</span></h1>
       <p class="lead">Masaüstü, laptop ve anakart onarımından veri kurtarmaya kadar tüm teknik servis ihtiyaçlarınız; ücretsiz teşhis, net fiyat ve 1 ay garantiyle. Moda'dan Erenköy'e yerinde destek.</p>
       <div class="hero-actions">
@@ -571,7 +580,7 @@
         <a href="#iletisim" class="btn btn-ghost">Ücretsiz Teşhis Talep Et</a>
       </div>
       <div class="trust-row">
-        <div class="trust-item"><strong>12+</strong><span>yıl tecrübe</span></div>
+        <div class="trust-item"><strong>Şeffaf</strong><span>fiyat & ön onay</span></div>
         <div class="trust-item"><strong>30 dk</strong><span>ortalama teşhis</span></div>
         <div class="trust-item"><strong>1 ay</strong><span>işçilik garantisi</span></div>
         <div class="trust-item"><strong>10+</strong><span>mahalleye yerinde servis</span></div>
@@ -691,7 +700,7 @@
   </div>
 </section>
 
-<!-- ============ WHY US ============ -->
+<!-- ============ WHY US (GÜVEN VE ŞEFFAFLIK ODAKLI) ============ -->
 <section id="neden-biz" style="background:var(--panel-2); border-top:1px solid #262e37; border-bottom:1px solid #262e37;">
   <div class="wrap">
     <div class="section-head">
@@ -699,10 +708,10 @@
       <h2>Kadıköy'ün güvendiği teknik servis</h2>
     </div>
     <div class="why-grid">
-      <div class="why-card"><strong>12+</strong><span>yıllık sektör tecrübesi</span></div>
-      <div class="why-card"><strong>%98</strong><span>onarım başarı oranı</span></div>
-      <div class="why-card"><strong>1 Ay</strong><span>parça ve işçilik garantisi</span></div>
-      <div class="why-card"><strong>7</strong><span>ilçede yerinde servis (İstanbul'un iki yakası)</span></div>
+      <div class="why-card"><strong>Şeffaf Süreç</strong><span>Arıza teşhisi sonrası onayınız alınmadan hiçbir ücretli işlem başlatılmaz.</span></div>
+      <div class="why-card"><strong>Doğru Parça</strong><span>Cihazınıza tam uyumlu, test edilmiş ve kaliteli yedek parçalar kullanılır.</span></div>
+      <div class="why-card"><strong>1 Ay Garanti</strong><span>Yapılan tüm donanım onarımları ve işçilik resmi güvence altındadır.</span></div>
+      <div class="why-card"><strong>Yerinde Servis</strong><span>Kadıköy genelinde ve çevre ilçelerde adresinize teknik destek sağlanır.</span></div>
     </div>
   </div>
 </section>
@@ -1106,3 +1115,5 @@
 
 </body>
 </html>
+
+```
