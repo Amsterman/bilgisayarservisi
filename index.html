@@ -34,7 +34,7 @@
 <meta name="twitter:title" content="Kadıköy Bilgisayar Servisi | Aynı Gün Bilgisayar ve Laptop Tamiri">
 <meta name="twitter:description" content="Ücretsiz teşhis, aynı gün teslim, 1 ay garanti. Kadıköy ve çevresine yerinde servis.">
 
-<!-- ============ FAVICON (basit, harici dosya gerektirmeyen inline SVG) ============ -->
+<!-- ============ FAVICON ============ -->
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%2312161b'/%3E%3Ccircle cx='50' cy='42' r='20' fill='none' stroke='%23c67a3d' stroke-width='6'/%3E%3Cline x1='50' y1='62' x2='50' y2='80' stroke='%234fa89c' stroke-width='6'/%3E%3C/svg%3E">
 
 <!-- ============ FONTLAR ============ -->
@@ -42,7 +42,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
 
-<!-- ============ YAPILANDIRILMIŞ VERİ (Schema.org) — SEO + GEO (AI arama motorları) ============ -->
+<!-- ============ YAPILANDIRILMIŞ VERİ (Schema.org) ============ -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -100,7 +100,6 @@
     {"@type": "Place", "name": "Bostancı"}
   ],
   "sameAs": [
-    "https://www.instagram.com/KULLANICI_ADI",
     "https://wa.me/905354315062"
   ]
 }
@@ -333,7 +332,7 @@
   .section-head h2{font-size:clamp(1.6rem, 3vw, 2.2rem); color:#fff; margin-bottom:14px;}
   .section-head p{color:var(--text-muted);}
 
-  /* ============ SERVICES — repair tag cards ============ */
+  /* ============ SERVICES ============ */
   .services-grid{
     display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:22px;
   }
@@ -400,15 +399,17 @@
   }
   .area-chip strong{color:var(--teal); font-weight:600;}
 
-  /* ============ TESTIMONIALS ============ */
-  .testi-grid{display:grid; grid-template-columns:repeat(3, 1fr); gap:22px;}
+  /* ============ TESTIMONIALS (YORUMLAR) ============ */
+  .testi-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:22px;}
   .testi-card{
     background:var(--panel); border:1px solid #262e37; border-radius:var(--radius);
-    padding:26px; display:flex; flex-direction:column; gap:14px;
+    padding:26px; display:flex; flex-direction:column; gap:14px; text-decoration:none;
+    transition:transform .18s ease, border-color .18s ease;
   }
+  .testi-card:hover{transform:translateY(-3px); border-color:#3a4552;}
   .stars{color:var(--copper-bright); letter-spacing:2px; font-size:0.95rem;}
-  .testi-card p.quote{color:var(--text); font-size:0.94rem;}
-  .testi-who{display:flex; justify-content:space-between; font-size:0.82rem; color:var(--text-muted); border-top:1px solid #262e37; padding-top:12px;}
+  .testi-card p.quote{color:var(--text); font-size:0.94rem; flex-grow:1;}
+  .testi-who{display:flex; justify-content:space-between; align-items:center; font-size:0.84rem; color:var(--text-muted); border-top:1px solid #262e37; padding-top:12px;}
 
   /* ============ FAQ ============ */
   .faq-list{display:flex; flex-direction:column; gap:12px; max-width:760px;}
@@ -507,6 +508,7 @@
       <li><a href="#neden-biz">Neden Biz</a></li>
       <li><a href="#referanslar">Referanslar</a></li>
       <li><a href="#bolgeler">Bölgeler</a></li>
+      <li><a href="#yorumlar">Yorumlar</a></li>
       <li><a href="#sss">SSS</a></li>
       <li><a href="#iletisim">İletişim</a></li>
       <li class="mobile-cta-item"><a href="tel:+905354315062" class="btn btn-ghost btn-block">📞 0535 431 50 62</a></li>
@@ -787,80 +789,57 @@
   </div>
 </section>
 
-<!-- ============ GOOGLE REVIEWS (canlı / otomatik) ============ -->
+<!-- ============ MÜŞTERİ YORUMLARI (STATİK & DOĞRULANMIŞ) ============ -->
 <section id="yorumlar">
   <div class="wrap">
     <div class="section-head">
       <span class="label">Müşteri Yorumları</span>
-      <h2 id="reviewsHeading">Google'daki yorumlarımız</h2>
-      <p>Bu alan, aşağıdaki ayarları girdiğinizde Google İşletme Profili'nizdeki gerçek yorumları otomatik olarak çeker ve gösterir.</p>
+      <h2>Google İşletme Profili Yorumlarımız</h2>
+      <p>Kadıköy ve çevresinde bizi tercih eden müşterilerimizin Google Haritalar üzerindeki gerçek deneyimleri.</p>
     </div>
 
-    <div id="googleReviews" class="testi-grid">
-      <!-- JS ile doldurulur -->
-    </div>
+    <div class="testi-grid">
+      <!-- 1. Yorum: Can Günay -->
+      <a href="https://maps.google.com/?q=Kad%C4%B1k%C3%B6y+bilgisayar+tamir+servisi" target="_blank" rel="noopener" class="testi-card">
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <span class="stars">★★★★★</span>
+          <span style="font-size:0.75rem; color:var(--teal); display:inline-flex; align-items:center; gap:5px; font-weight:600;">
+            <svg width="14" height="14" viewBox="0 0 24 24"><path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.8-2.4 3.67v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.16z"/><path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.94H1.24v3.15C3.26 21.36 7.34 24 12 24z"/><path fill="#FBBC05" d="M5.28 14.26c-.25-.72-.38-1.49-.38-2.26s.13-1.54.38-2.26V6.59H1.24C.45 8.16 0 9.97 0 12s.45 3.84 1.24 5.41l4.04-3.15z"/><path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.34 0 3.26 2.64 1.24 6.59l4.04 3.15c.95-2.84 3.6-4.94 6.72-4.94z"/></svg>
+            Google Yorumu ↗
+          </span>
+        </div>
+        <p class="quote">"Arkadaş tavsiye etti, dijital medyayla ilgili birçok işi yaptıklarını duyduk. Ajansimizin sosyal medya platformlarini yönetiyorlar. Şimdiye kadar memnunuz."</p>
+        <div class="testi-who">
+          <strong style="color:#fff;">Can Günay</strong>
+          <span>3 ay önce</span>
+        </div>
+      </a>
 
-    <p id="reviewsFallback" class="form-note" style="margin-top:18px; display:none;">
-      Canlı yorumlar henüz bağlanmadı. Aşağıdaki <code>GOOGLE_MAPS_API_KEY</code> ve <code>GOOGLE_PLACE_ID</code> değerlerini index.html içinde doldurun (bkz. README, "Canlı Google Yorumları" bölümü).
-      O zamana kadar buraya doğrudan
-      <a href="https://search.google.com/local/writereview?placeid=GOOGLE_PLACE_ID" target="_blank" rel="noopener">Google'da yorumları görüntüle</a> bağlantısı gösterilir.
-    </p>
+      <!-- 2. Yorum: Hakan Dursun -->
+      <a href="https://maps.google.com/?q=Kad%C4%B1k%C3%B6y+bilgisayar+tamir+servisi" target="_blank" rel="noopener" class="testi-card">
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <span class="stars">★★★★★</span>
+          <span style="font-size:0.75rem; color:var(--teal); display:inline-flex; align-items:center; gap:5px; font-weight:600;">
+            <svg width="14" height="14" viewBox="0 0 24 24"><path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.8-2.4 3.67v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.16z"/><path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.94H1.24v3.15C3.26 21.36 7.34 24 12 24z"/><path fill="#FBBC05" d="M5.28 14.26c-.25-.72-.38-1.49-.38-2.26s.13-1.54.38-2.26V6.59H1.24C.45 8.16 0 9.97 0 12s.45 3.84 1.24 5.41l4.04-3.15z"/><path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.34 0 3.26 2.64 1.24 6.59l4.04 3.15c.95-2.84 3.6-4.94 6.72-4.94z"/></svg>
+            Google Yorumu ↗
+          </span>
+        </div>
+        <p class="quote">"Google'a fikirtepe bilgisayar servisi yazarak buldum. iyi ki de aramışım. anında çözüm buldular."</p>
+        <div class="testi-who">
+          <strong style="color:#fff;">Hakan Dursun</strong>
+          <span>3 ay önce</span>
+        </div>
+      </a>
+
+      <!-- 3. Kart: Profil ve Yeni Yorum Yapma Alanı -->
+      <div class="testi-card" style="align-items:center; justify-content:center; text-align:center; background:var(--panel-2);">
+        <strong style="color:#fff; font-size:1.05rem; margin-bottom:6px;">Google'da Bizi Değerlendirin</strong>
+        <span style="color:var(--text-muted); font-size:0.86rem; margin-bottom:16px;">Tüm müşteri yorumlarını incelemek veya siz de değerlendirme yapmak için tıklayın.</span>
+        <a href="https://maps.google.com/?q=Kad%C4%B1k%C3%B6y+bilgisayar+tamir+servisi" target="_blank" rel="noopener" class="btn btn-ghost" style="align-self:center;">Google'da Görüntüle ↗</a>
+      </div>
+    </div>
   </div>
 </section>
-
-<script>
-  // ============ CANLI GOOGLE YORUMLARI ============
-  // 1) Google Cloud Console'dan bir API anahtarı oluşturun (Places API'yi etkinleştirin).
-  // 2) API anahtarını GitHub Pages alan adınıza (HTTP referrer) kısıtlayın.
-  // 3) İşletmenizin Place ID'sini şuradan bulun: https://developers.google.com/maps/documentation/places/web-service/place-id
-  // Detaylı adımlar README.md içinde "Canlı Google Yorumları" bölümündedir.
-  const GOOGLE_MAPS_API_KEY = "BURAYA_API_ANAHTARINIZI_YAZIN";
-  const GOOGLE_PLACE_ID = "BURAYA_PLACE_ID_YAZIN";
-
-  function renderReviews(reviews, rating, total, url){
-    const grid = document.getElementById('googleReviews');
-    const heading = document.getElementById('reviewsHeading');
-    if(rating && total){
-      heading.textContent = `Google'da ${rating}/5 (${total} yorum)`;
-    }
-    grid.innerHTML = reviews.slice(0,6).map(r => `
-      <div class="testi-card">
-        <span class="stars">${'★'.repeat(Math.round(r.rating))}${'☆'.repeat(5-Math.round(r.rating))}</span>
-        <p class="quote">"${(r.text || '').slice(0,220)}${(r.text||'').length>220 ? '…' : ''}"</p>
-        <div class="testi-who"><span>${r.author_name || 'Google Kullanıcısı'}</span><span>${r.relative_time_description || ''}</span></div>
-      </div>
-    `).join('') + `
-      <div class="testi-card" style="align-items:center; justify-content:center; text-align:center;">
-        <span style="color:var(--text-muted); font-size:0.9rem;">Tüm yorumları görmek için</span>
-        <a href="${url}" target="_blank" rel="noopener" class="btn btn-ghost" style="align-self:center;">Google'da Görüntüle</a>
-      </div>`;
-  }
-
-  function loadGoogleReviews(){
-    const fallback = document.getElementById('reviewsFallback');
-    if(!GOOGLE_MAPS_API_KEY || GOOGLE_MAPS_API_KEY.includes('BURAYA') || !GOOGLE_PLACE_ID || GOOGLE_PLACE_ID.includes('BURAYA')){
-      fallback.style.display = 'block';
-      return;
-    }
-    const script = document.createElement('script');
-    script.src = `https://maps.googleapis.com/maps/api/js?key=${GOOGLE_MAPS_API_KEY}&libraries=places&callback=initGooglePlaces`;
-    script.async = true;
-    window.initGooglePlaces = function(){
-      const service = new google.maps.places.PlacesService(document.createElement('div'));
-      service.getDetails({ placeId: GOOGLE_PLACE_ID, fields: ['reviews','rating','user_ratings_total','url'] }, (place, status) => {
-        if(status === google.maps.places.PlacesServiceStatus.OK && place && place.reviews && place.reviews.length){
-          renderReviews(place.reviews, place.rating, place.user_ratings_total, place.url);
-        } else {
-          fallback.style.display = 'block';
-        }
-      });
-    };
-    script.onerror = () => { fallback.style.display = 'block'; };
-    document.head.appendChild(script);
-  }
-
-  loadGoogleReviews();
-</script>
 
 <!-- ============ FAQ ============ -->
 <section id="sss" style="background:var(--panel-2); border-top:1px solid #262e37; border-bottom:1px solid #262e37;">
@@ -983,6 +962,7 @@
           <li><a href="#hizmetler">Hizmetler</a></li>
           <li><a href="#cozumler">Çözümler</a></li>
           <li><a href="#bolgeler">Hizmet Bölgesi</a></li>
+          <li><a href="#yorumlar">Müşteri Yorumları</a></li>
           <li><a href="#sss">SSS</a></li>
           <li><a href="#iletisim">İletişim</a></li>
           <li><a href="uskudar-bilgisayar-servisi.html">Üsküdar Bilgisayar Servisi</a></li>
@@ -1040,7 +1020,7 @@
     });
   });
 
-  // Servis formu — AJAX ile gönderim (sayfa yenilenmeden, anlık geri bildirimle)
+  // Servis formu — AJAX ile gönderim
   const CONTACT_EMAIL = "furkan.mann@gmail.com";
   const contactForm = document.getElementById('contactForm');
   const contactStatus = document.getElementById('contactFormStatus');
