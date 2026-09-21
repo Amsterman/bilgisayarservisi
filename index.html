@@ -968,6 +968,318 @@
     }
   });
 </script>
+<!-- ================================================================= -->
+<!-- KVKK, GİZLİLİK VE ÇEREZ (COOKIE) YÖNETİMİ TEK PARÇA ENTEGRASYONU -->
+<!-- ================================================================= -->
 
+<style>
+  /* --- Çerez (Cookie) Banner Stilleri --- */
+  .custom-cookie-banner {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 92%;
+    max-width: 620px;
+    background: #0f172a;
+    color: #f8fafc;
+    padding: 16px 22px;
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+    z-index: 99999;
+    font-family: inherit;
+    font-size: 13.5px;
+    display: none;
+    box-sizing: border-box;
+  }
+  .custom-cookie-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .custom-cookie-content p {
+    margin: 0;
+    flex: 1 1 280px;
+    line-height: 1.5;
+    color: #cbd5e1;
+  }
+  .custom-cookie-content a {
+    color: #38bdf8;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  .custom-cookie-actions {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+  .btn-cookie-agree {
+    background: #2563eb;
+    color: #ffffff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+  .btn-cookie-agree:hover {
+    background: #1d4ed8;
+  }
+  .btn-cookie-dismiss {
+    background: transparent;
+    color: #94a3b8;
+    border: 1px solid #334155;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .btn-cookie-dismiss:hover {
+    color: #ffffff;
+    border-color: #64748b;
+  }
+
+  /* --- Yasal Modal Stilleri --- */
+  .custom-legal-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 100000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    box-sizing: border-box;
+  }
+  .custom-legal-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.7);
+    backdrop-filter: blur(4px);
+  }
+  .custom-legal-card {
+    position: relative;
+    background: #ffffff;
+    color: #1e293b;
+    width: 100%;
+    max-width: 650px;
+    max-height: 85vh;
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    z-index: 1;
+    overflow: hidden;
+  }
+  .custom-legal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+    border-bottom: 1px solid #e2e8f0;
+    background: #f8fafc;
+  }
+  .custom-legal-header h3 {
+    margin: 0;
+    font-size: 17px;
+    font-weight: 700;
+    color: #0f172a;
+  }
+  .custom-legal-close {
+    background: none;
+    border: none;
+    font-size: 26px;
+    line-height: 1;
+    color: #64748b;
+    cursor: pointer;
+    padding: 4px;
+  }
+  .custom-legal-close:hover {
+    color: #0f172a;
+  }
+  .custom-legal-body {
+    padding: 24px;
+    overflow-y: auto;
+    font-size: 14px;
+    line-height: 1.65;
+    color: #334155;
+  }
+  .custom-legal-body h4 {
+    margin: 16px 0 6px 0;
+    font-size: 15px;
+    color: #0f172a;
+  }
+  .custom-legal-body ul {
+    margin: 8px 0;
+    padding-left: 20px;
+  }
+  .custom-legal-body li {
+    margin-bottom: 4px;
+  }
+
+  /* Form onay kutusu için yardımcı stil */
+  .kvkk-form-checkbox {
+    margin: 15px 0;
+    font-size: 13px;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    text-align: left;
+  }
+  .kvkk-form-checkbox input {
+    margin-top: 3px;
+    cursor: pointer;
+    accent-color: #2563eb;
+  }
+  .kvkk-form-checkbox label {
+    color: #475569;
+    line-height: 1.45;
+    cursor: pointer;
+  }
+  .kvkk-form-checkbox a {
+    color: #2563eb;
+    text-decoration: underline;
+  }
+</style>
+
+<!-- Çerez Bildirim Barı -->
+<div id="cookieBanner" class="custom-cookie-banner">
+  <div class="custom-cookie-content">
+    <p>
+      Sitemizde deneyiminizi geliştirmek ve servis taleplerinizi hızlıca yönetebilmek adına çerezler kullanılmaktadır. 
+      Detaylar için <a onclick="openLegalModal('privacy')">Gizlilik ve Çerez Politikası</a>'nı inceleyebilirsiniz.
+    </p>
+    <div class="custom-cookie-actions">
+      <button type="button" class="btn-cookie-agree" onclick="acceptCookies()">Kabul Et</button>
+      <button type="button" class="btn-cookie-dismiss" onclick="closeCookieBanner()">Kapat</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Penceresi -->
+<div id="legalModal" class="custom-legal-modal">
+  <div class="custom-legal-overlay" onclick="closeLegalModal()"></div>
+  <div class="custom-legal-card">
+    <div class="custom-legal-header">
+      <h3 id="legalModalTitle">Aydınlatma Metni</h3>
+      <button type="button" class="custom-legal-close" onclick="closeLegalModal()">&times;</button>
+    </div>
+    <div id="legalModalBody" class="custom-legal-body"></div>
+  </div>
+</div>
+
+<script>
+  // Yasal Metin Verileri
+  const legalDocs = {
+    kvkk: `
+      <h4>1. Veri Sorumlusu</h4>
+      <p>6698 sayılı Kişisel Verilerin Korunması Kanunu ("KVKK") uyarınca, <strong>Kadıköy Bilgisayar Tamir Servisi (bilgisayarservisi.site)</strong> olarak tarafımıza iletmiş olduğunuz kişisel verileriniz veri sorumlusu sıfatıyla korunmaktadır.</p>
+
+      <h4>2. İşlenen Kişisel Veriler ve İşlenme Amaçları</h4>
+      <p>İletişim ve arıza formu vasıtasıyla paylaştığınız Ad-Soyad, Telefon Numarası, Arıza Detayı ve Adres bilgileriniz;</p>
+      <ul>
+        <li>Teknik servis arıza teşhisinin yapılması ve fiyat teklifinin iletilmesi,</li>
+        <li>Yerinde teknik destek randevusunun oluşturulması ve servis takibi,</li>
+        <li>Onarım sonrası garanti ve müşteri memnuniyeti süreçlerinin yürütülmesi</li>
+      </ul>
+      <p>amaçlarıyla sınırlı ve ölçülü olarak işlenmektedir.</p>
+
+      <h4>3. Verilerin Aktarılması</h4>
+      <p>Kişisel verileriniz kanunen yetkili resmi kurum ve kuruluşlar haricinde hiçbir üçüncü taraf kişi, kurum veya reklam ağı ile paylaşılmaz ve yurt dışına aktarılmaz.</p>
+
+      <h4>4. KVKK Kapsamındaki Haklarınız</h4>
+      <p>KVKK'nın 11. maddesi uyarınca; verilerinizin işlenip işlenmediğini öğrenme, silinmesini veya düzeltilmesini talep etme hakkına sahipsiniz. Taleplerinizi <strong>furkan.mann@gmail.com</strong> adresine iletebilirsiniz.</p>
+    `,
+    privacy: `
+      <h4>1. Gizlilik Politikası</h4>
+      <p>Kadıköy Bilgisayar Servisi olarak kullanıcılarımızın gizliliğine saygı duyuyoruz. Form üzerinden sağlanan iletişim bilgileri yalnızca teknik servis hizmetinin icrası için kullanılır.</p>
+
+      <h4>2. Çerez (Cookie) Kullanımı</h4>
+      <p>Web sitemizde sayfa performansını izlemek, kullanıcı tercihlerini hatırlamak ve site güvenliğini sağlamak amacıyla teknik ve analitik çerezler kullanılmaktadır.</p>
+
+      <h4>3. Çerezleri Kontrol Etme</h4>
+      <p>Tarayıcınızın ayarlarından dilediğiniz zaman çerezleri silebilir veya çerez kullanımını engelleyebilirsiniz.</p>
+    `
+  };
+
+  // Modal Aç/Kapat
+  function openLegalModal(type) {
+    const modal = document.getElementById('legalModal');
+    const title = document.getElementById('legalModalTitle');
+    const body = document.getElementById('legalModalBody');
+
+    if (!modal || !title || !body) return;
+
+    if (type === 'kvkk') {
+      title.textContent = 'KVKK Aydınlatma Metni';
+      body.innerHTML = legalDocs.kvkk;
+    } else {
+      title.textContent = 'Gizlilik ve Çerez Politikası';
+      body.innerHTML = legalDocs.privacy;
+    }
+
+    modal.style.display = 'flex';
+  }
+
+  function closeLegalModal() {
+    const modal = document.getElementById('legalModal');
+    if (modal) modal.style.display = 'none';
+  }
+
+  // Çerez Yönetimi
+  function acceptCookies() {
+    try {
+      localStorage.setItem('cookie_consent_status', 'accepted');
+    } catch (e) {}
+    closeCookieBanner();
+  }
+
+  function closeCookieBanner() {
+    const banner = document.getElementById('cookieBanner');
+    if (banner) banner.style.display = 'none';
+  }
+
+  // Sayfa açılış kontrolleri
+  document.addEventListener('DOMContentLoaded', () => {
+    // Çerez kontrolü
+    try {
+      if (!localStorage.getItem('cookie_consent_status')) {
+        const banner = document.getElementById('cookieBanner');
+        if (banner) {
+          setTimeout(() => {
+            banner.style.display = 'block';
+          }, 600);
+        }
+      }
+    } catch (e) {}
+
+    // ESC tuşuyla modal kapatma
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeLegalModal();
+    });
+
+    // Sayfadaki mevcut iletişim formuna KVKK onay kutusunu otomatik entegre et
+    const contactForm = document.querySelector('form');
+    if (contactForm && !document.getElementById('kvkkConsentBox')) {
+      const submitBtn = contactForm.querySelector('button[type="submit"], input[type="submit"]');
+      if (submitBtn) {
+        const checkboxDiv = document.createElement('div');
+        checkboxDiv.className = 'kvkk-form-checkbox';
+        checkboxDiv.innerHTML = `
+          <input type="checkbox" id="kvkkConsentBox" name="kvkk_consent" required>
+          <label for="kvkkConsentBox">
+            <a href="javascript:void(0)" onclick="openLegalModal('kvkk')">KVKK Aydınlatma Metni</a>'ni okudum, kişisel verilerimin servis süreci kapsamında işlenmesini onaylıyorum.
+          </label>
+        `;
+        submitBtn.parentNode.insertBefore(checkboxDiv, submitBtn);
+      }
+    }
+  });
+</script>
+<!-- ================================================================= -->
 </body>
 </html>
