@@ -1,6 +1,6 @@
 # Kadıköy Bilgisayar Servisi
 
-> Kadıköy, İstanbul merkezli bilgisayar ve laptop tamir servisi. Ücretsiz teşhis, aynı gün teslim ve 1 ay garanti sunar.
+> Kadıköy, İstanbul merkezli bilgisayar ve laptop tamir servisi. Ücretsiz teşhis, aynı gün teslim ve 3 ay garanti sunar. Sitemizi ziyaret edin: [Kadıköy Bilgisayar Servisi Ana Sayfa](https://bilgisayarservisi.site/)
 
 ## Hizmetler
 - Masaüstü bilgisayar tamiri
@@ -30,27 +30,25 @@ Ayrıca İstanbul'un iki yakasında şu ilçelere de yerinde teknik destek sağl
 - Beşiktaş (Avrupa yakası): Levent, Etiler, Bebek, Ortaköy, Arnavutköy, Gayrettepe, Türkali, Konaklar, Vişnezade, Kuruçeşme
 - Şişli (Avrupa yakası): Mecidiyeköy, Nişantaşı, Teşvikiye, Fulya, Harbiye, Esentepe, Merkez, Kuştepe, Halide Edip Adıvar, Feriköy
 
-İlgili sayfalar:
-- https://bilgisayarservisi.site/uskudar-bilgisayar-servisi.html
-- https://bilgisayarservisi.site/maltepe-bilgisayar-servisi.html
-- https://bilgisayarservisi.site/atasehir-bilgisayar-servisi.html
-- https://bilgisayarservisi.site/umraniye-bilgisayar-servisi.html
-- https://bilgisayarservisi.site/besiktas-bilgisayar-servisi.html
-- https://bilgisayarservisi.site/sisli-bilgisayar-servisi.html
+## İlgili Hizmet Sayfaları
+Daha fazla detay için ilçe servis sayfalarımızı inceleyebilirsiniz:
+- [Üsküdar Bilgisayar Servisi](https://bilgisayarservisi.site/uskudar-bilgisayar-servisi.html)
+- [Maltepe Bilgisayar Servisi](https://bilgisayarservisi.site/maltepe-bilgisayar-servisi.html)
+- [Ataşehir Bilgisayar Servisi](https://bilgisayarservisi.site/atasehir-bilgisayar-servisi.html)
+- [Ümraniye Bilgisayar Servisi](https://bilgisayarservisi.site/umraniye-bilgisayar-servisi.html)
+- [Beşiktaş Bilgisayar Servisi](https://bilgisayarservisi.site/besiktas-bilgisayar-servisi.html)
+- [Şişli Bilgisayar Servisi](https://bilgisayarservisi.site/sisli-bilgisayar-servisi.html)
 
 ## Öne Çıkan Bilgiler
 - İlk teşhis (ön inceleme) ücretsizdir.
 - Ortalama teşhis süresi 30 dakikadır.
 - Parça stoktaysa çoğu onarım aynı gün içinde tamamlanır.
-- Değişen parça ve işçilik 1 ay garanti kapsamındadır.
+- Değişen parça ve işçilik 3 ay garanti kapsamındadır.
 - Kadıköy, Üsküdar, Maltepe, Ataşehir, Ümraniye, Beşiktaş ve Şişli'nin çeşitli mahallelerine yerinde (evde/ofiste) teknik destek verilir; İstanbul'un iki yakasında da hizmet verilir.
 - Çalışma saatleri: Pazartesi–Cuma 09:30–19:30, Cumartesi 10:00–17:00.
 
 ## İletişim
-- Telefon: 0535 431 50 62
-- WhatsApp: 0535 431 50 62
+- Telefon: +90 535 431 50 62
+- WhatsApp: +90 535 431 50 62
 - E-posta: furkan.mann@gmail.com
 - Adres: Eğitim Mahallesi, Kadıköy / İstanbul (fiziksel mağaza/showroom yok — yerinde/mobil teknik servis olarak hizmet verilmektedir)
-
-## Not
-Bu dosya, yapay zeka destekli arama ve yanıt motorlarının (ör. AI Overviews, Copilot, ChatGPT arama) işletme hakkında doğru ve güncel bilgi çıkarmasına yardımcı olmak için hazırlanmıştır. Yukarıdaki örnek iletişim bilgilerini gerçek verilerinizle güncelleyin.
